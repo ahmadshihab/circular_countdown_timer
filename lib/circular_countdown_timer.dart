@@ -123,7 +123,7 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
         return "00";
       } else if (widget.textFormat == CountdownTextFormat.S) {
         return "0";
-      } else {
+      } else if {
         return "00:00:00";
       }
       else {
