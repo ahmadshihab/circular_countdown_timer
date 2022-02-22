@@ -116,17 +116,20 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
   Animation<double>? _countDownAnimation;
 
   String get time {
-   
     if (_controller!.isDismissed && widget.showDuration) {
       return _getTime(_controller!.duration!);
+
+      if (widget.textFormat == CountdownTextFormat.MM_SS) {
+        return "00:00";
       } else if (widget.textFormat == CountdownTextFormat.SS) {
         return "00";
       } else if (widget.textFormat == CountdownTextFormat.S) {
         return "0";
-      } else if {
+      } else {
         return "00:00:00";
       }
-      else {
+    }
+    else {
       Duration duration = _controller!.duration! * _controller!.value;
       return _getTime(duration);
     }
