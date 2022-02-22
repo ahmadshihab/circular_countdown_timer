@@ -126,7 +126,7 @@ class CircularCountDownTimerState extends State<CircularCountDownTimer>
       } else {
         return "00:00:00";
       }
-    } else {
+      else {
       Duration duration = _controller!.duration! * _controller!.value;
       return _getTime(duration);
     }
